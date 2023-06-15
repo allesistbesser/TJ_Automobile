@@ -1,0 +1,570 @@
+{% extends 'home.html' %}
+{% load static %}
+
+
+{% block content %}
+
+ <!-- main-area -->
+ <main>
+
+  <!-- banner-area -->
+  <section class="banner-area fix" data-background="{% static 'img/slider/banner_bg.jpg' %}">
+      <div class="container custom-container">
+          <div class="row align-items-center justify-content-between">
+              <div class="col-lg-6 order-0 order-lg-2">
+                  <div class="banner-img">
+                      <img src="{% static 'img/slider/mercedes_eq1.png' %}" style="width: 700px;" alt="">
+                      <img class="banner-shape" src="{% static 'img/slider/banner_shape.png' %}" alt="">
+                  </div>
+              </div>
+              <div class="col-xl-5 col-lg-6">
+                  <div class="slider-content">
+                      <span class="wow fadeInUp" data-wow-delay=".3s">BESTER AUTOHÄNDLER</span>
+                      <h3 class="wow fadeInUp" data-wow-delay=".6s">Finden Sie bei uns das perfekte Auto</h3>
+                      <p class="wow fadeInUp" data-wow-delay=".9s"></p>
+                      <a href="#" class="btn wow fadeInUp scroll-to-target" data-wow-delay="1.2s" data-target="#cars-area"><span>+</span> entdecke mehr</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="banner-overlay-text">Autohändler und Service</div>
+      <div class="banner-line-wrap">
+          <span class="line-one"></span>
+          <span class="line-two"></span>
+      </div>
+  </section>
+  <!-- banner-area-end -->
+
+<!-- latest-cars-area -->
+<section class="latest-cars-area gray-lite-bg pt-120 pb-70" id="cars-area">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-xl-5 col-lg-6">
+              <div class="section-title text-center mb-35">
+                  <!-- <h2 class="overlay-title">All Seller</h2>
+                  <span class="sub-title">our Featured Cars</span> -->
+                  <h2 class="title">Unsere Favoriten</h2>
+              </div>
+              <div class="latest-car-menu-wrap">
+                  <div class="latest-car-menu-active">
+                      <button class="active" data-filter="*">alles</button>
+
+                      {% for item in category %}
+                      <button class="" data-filter=".{{item.name}}">{{item.name}}</button>
+                      {% endfor %}
+                     
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="latest-cars-wrapper">
+          <div class="row latest-car-items-active">
+            {% for item in featured %}
+              <div class="col-lg-4 col-md-6 grid-item grid-sizer {{item.category}}">
+                  <div class="latest-car-item mb-50">
+                      <div class="latest-car-content">
+                          <div class="latest-car-content-top">
+                              <h5><a href="{{item.link}}" target="_blank">{{item.title}}</a></h5>
+                              <span class="price">{{item.category}}</span>
+                          </div>
+                          <p><span></span></p>
+                          <div class="latest-car-thumb mt-30 mb-25">
+                              <a href="{{item.link}}" target="_blank">
+                                  <img src="/media/{{item.image}}" alt="{{item.title}}">
+                              </a>
+                          </div>
+                          <div class="latest-car-meta">
+                              <ul>
+                                  <li><i class="flaticon-settings"></i> Klicken Sie auf das Bild für detaillierte Informationen</li>
+                                  <!-- <li><i class="flaticon-gasoline-pump"></i> </li> -->
+                                  <!-- <li><i class="flaticon-motorway"></i></li> -->
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              {% endfor %}
+             
+          </div>
+      </div>
+  </div>
+</section>
+<!-- latest-cars-area-end -->
+
+  <!-- services-area -->
+  <section class="best-services-area">
+      <div class="container-fluid p-0 fix">
+          <div class="row no-gutters justify-content-center">
+              <div class="col-xl-6 col-lg-12 col-md-6 col-sm-9">
+                  <div class="best-services-item">
+                      <div class="best-services-thumb">
+                          <img src="{% static 'img/images/best_services_img01.jpg' %}" alt="best services">
+                      </div>
+                      <div class="best-services-content" data-background="{% static 'img/bg/best_services_bg01.jpg' %}">
+                          <ul class="meta">
+                              <li><a href="#">Gebrauchtwagen</a></li>
+                              <li><a href="#">Brandneu</a></li>
+                             
+                          </ul>
+                          <h3><a href="#">Erweiterter Fahrzeug Reparatur Service</a></h3>
+                          <!-- <div class="rating">
+                              <ul>
+                                  <li>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                  </li>
+                                  <li>- ( 5.0 Reviews )</li>
+                              </ul>
+                          </div>
+                          <h2 class="price">$23500</h2>
+                          <a href="#" class="read-more btn">Buy Now</a> -->
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-6 col-lg-12 col-md-6 col-sm-9">
+                  <div class="best-services-item">
+                      <div class="best-services-thumb">
+                          <img src="{% static 'img/images/best_services_img02.jpg' %}" alt="">
+                      </div>
+                      <div class="best-services-content bg-2" data-background="{% static 'img/bg/best_services_bg02.jpg' %}">
+                          <ul class="meta">
+                              <li><a href="#">Motor</a></li>
+                              <li><a href="#">Brandneu</a></li>
+                          </ul>
+                          <h3><a href="#">Service 1 Jahre Garantie</a></h3>
+                          <!-- <div class="rating">
+                              <ul>
+                                  <li>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                  </li>
+                                  <li>- ( 5.0 Reviews )</li>
+                              </ul>
+                          </div>
+                          <h2 class="price">$23500</h2>
+                          <a href="#" class="read-more btn">Buy Now</a> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- services-area-end -->
+
+  <!-- car-search-area -->
+  <!-- <section class="car-search-area car-search-style-two pt-120">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="car-search-wrap">
+                      <div class="small-title mb-20">
+                          <h4><i class="flaticon-searching-car"></i> LOOKING FOR A <span>CAR?</span></h4>
+                      </div>
+                      <form action="#" class="car-search-form">
+                          <div class="row align-items-end">
+                              <div class="col custom-col-4">
+                                  <select name="name" class="selected">
+                                      <option value="">Select Model</option>
+                                      <option value="">Mercedes-Benz</option>
+                                      <option value="">Volkswagen</option>
+                                      <option value="">Aston-Martin</option>
+                                      <option value="">Lamborghini</option>
+                                      <option value="">Koenigsegg</option>
+                                  </select>
+                              </div>
+                              <div class="col custom-col-4">
+                                  <select name="name" class="selected">
+                                      <option value="">Select Model</option>
+                                      <option value="">Volkswagen SC20</option>
+                                      <option value="">Honda CBR9</option>
+                                      <option value="">Aston K35l8</option>
+                                      <option value="">BMW SC20</option>
+                                      <option value="">Toyota T86LM</option>
+                                  </select>
+                              </div>
+                              <div class="col custom-col-4">
+                                  <select name="name" class="selected">
+                                      <option value="">Select Model</option>
+                                      <option value="">SORN Status</option>
+                                      <option value="">Fuel Type</option>
+                                      <option value="">Last Log Book</option>
+                                      <option value="">MOT Expires</option>
+                                      <option value="">Vehicle TAX</option>
+                                  </select>
+                              </div>
+                              <div class="col custom-col-4">
+                                  <select name="name" class="selected">
+                                      <option value="">BMW 7 Series</option>
+                                      <option value="">Mercedes-Benz</option>
+                                      <option value="">Volkswagen</option>
+                                      <option value="">Aston-Martin</option>
+                                      <option value="">Lamborghini</option>
+                                      <option value="">Koenigsegg</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col range-custom-col">
+                                  <div class="price_filter">
+                                      <div class="price_slider_amount">
+                                          <span>SELECT PRICE</span>
+                                          <input type="text" id="amount" name="price" placeholder="Add Your Price" />
+                                      </div>
+                                      <div id="slider-range"></div>
+                                  </div>
+                              </div>
+                              <div class="col range-custom-col">
+                                  <div class="price_filter">
+                                      <div class="price_slider_amount">
+                                          <span>SELECT top MILAGE</span>
+                                          <input type="text" id="milage" name="price" placeholder="Add Your Price" />
+                                      </div>
+                                      <div id="milage-range"></div>
+                                  </div>
+                              </div>
+                              <div class="col range-custom-col-btn">
+                                  <button class="btn">SELECT VEHICLE</button>
+                              </div>
+                          </div>
+                      </form>
+                      <div class="car-search-map-icon"><i class="flaticon-location"></i></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section> -->
+  <!-- car-search-area-end -->
+
+  <!-- car-category-area -->
+  <!-- <section class="car-category-area pt-120 pb-120">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-xl-6 col-lg-7">
+                  <div class="section-title text-center mb-70">
+                      <h2 class="overlay-title">Browse cars</h2>
+                      <span class="sub-title">categories cars</span>
+                      <h2 class="title">Browse by Type cars</h2>
+                      <div class="line"><img src="img/images/title_line.png" alt=""></div>
+                  </div>
+              </div>
+          </div>
+          <div class="row car-category-active">
+              <div class="col">
+                  <div class="car-cat-item">
+                      <a href="#">
+                          <img src="img/images/car_cat01.png" alt="">
+                          <span>Hybrid i7</span>
+                      </a>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="car-cat-item">
+                      <a href="#">
+                          <img src="img/images/car_cat02.png" alt="">
+                          <span>Jaguar W7</span>
+                      </a>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="car-cat-item">
+                      <a href="#">
+                          <img src="img/images/car_cat03.png" alt="">
+                          <span>Hybrid 91H6</span>
+                      </a>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="car-cat-item">
+                      <a href="#">
+                          <img src="img/images/car_cat04.png" alt="">
+                          <span>Toyota Aqua</span>
+                      </a>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="car-cat-item">
+                      <a href="#">
+                          <img src="img/images/car_cat05.png" alt="">
+                          <span>Sedan 800</span>
+                      </a>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="car-cat-item">
+                      <a href="#">
+                          <img src="img/images/car_cat06.png" alt="">
+                          <span>Toyota 7G9</span>
+                      </a>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="car-cat-item">
+                      <a href="#">
+                          <img src="img/images/car_cat04.png" alt="">
+                          <span>Lamborghini</span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section> -->
+  <!-- car-category-area-end -->
+
+  <!-- about-area -->
+  <section class="about-area about-bg pt-120 pb-120" data-background="{% static 'img/bg/about_bg.jpg' %}">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-lg-6">
+                  <div class="about-img-wrap">
+                      <div class="row align-items-end">
+                          <div class="col-sm-6">
+                              <div class="about-exp">
+                                  <h2>20<span>+</span></h2>
+                              </div>
+                              <div class="about-img">
+                                  <img src="{% static 'img/images/about_img01.jpg' %}" alt="">
+                              </div>
+                          </div>
+                          <div class="col-sm-6">
+                              <div class="about-img">
+                                  <img src="{% static 'img/images/about_img02.jpg' %}" alt="">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6">
+                  <div class="about-content-wrap">
+                      <div class="section-title white-title mb-40">
+                          <span class="sub-title">About Our Company</span>
+                          <h2 class="title">More for trade-in could increase car here<span>.</span></h2>
+                      </div>
+                      <div class="content">
+                          <div class="icon">
+                              <img src="{% static 'img/images/m.png' %}" alt="">
+                          </div>
+                          <p>Lorem ipsum, or lipsum as it is sometimes known dummy text used in laying out print, graphic or web designs. The passage
+                          is attributed to an unknown.</p>
+                      </div>
+                      <div class="about-list mb-40">
+                          <ul>
+                              <li>
+                                  <div class="icon"><i class="fas fa-check"></i></div>
+                                  Sometimes known dummy
+                              </li>
+                              <li>
+                                  <div class="icon"><i class="fas fa-check"></i></div>
+                                  Best solution for developing your business
+                              </li>
+                              <li>
+                                  <div class="icon"><i class="fas fa-check"></i></div>
+                                  Deserunt ad ipsum sint excepteur
+                              </li>
+                              <li>
+                                  <div class="icon"><i class="fas fa-check"></i></div>
+                                  Lorem sit occaecat ea proident excepteur
+                              </li>
+                          </ul>
+                      </div>
+                      <a href="#" class="btn">LEARN MORE</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- about-area-end -->
+
+  
+
+  <!-- video-area -->
+  <section class="video-area">
+      <div class="video-bg" data-background="{% static 'img/bg/video_bg.jpg' %}"></div>
+      <div class="container">
+          <div class="video-area-wrap">
+              <div class="row align-items-center justify-content-between">
+                  <div class="col-xl-5 col-lg-4 order-0 order-lg-2">
+                      <div class="video-play-icon">
+                          <a href="https://www.youtube.com/watch?v=c_QoZtzXlm4" class="popup-video"><i class="fas fa-play"></i>Video
+                              showcase 02:45</a>
+                      </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-8">
+                      <div class="section-title white-title">
+                          <span class="display-3 text-danger">Über unsere Firma</span>
+                          <!-- <h2 class="title">More for trade-in could increase car here<span>.</span></h2> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- <div class="container">
+          <div class="progress-wrap" data-background="img/bg/progress_bg.jpg">
+              <div class="row">
+                  <div class="col-lg-6">
+                      <div class="section-title">
+                          <span class="sub-title">About Our Company</span>
+                          <h2 class="title">Perfect Design & Developer Building Easy<span>.</span></h2>
+                          <p>Lorem ipsum, or lipsum as it is sometimes known dummy text used in laying out print, graphic or web designs. The passage
+                          is known attributed.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-6">
+                      <div class="progress-list">
+                          <div class="progress-item">
+                              <h6>Web Design</h6>
+                              <div class="progress">
+                                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span>80%</span></div>
+                              </div>
+                          </div>
+                          <div class="progress-item">
+                              <h6>PHP Development</h6>
+                              <div class="progress">
+                                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%"><span>65%</span></div>
+                              </div>
+                          </div>
+                          <div class="progress-item">
+                              <h6>Web Management</h6>
+                              <div class="progress">
+                                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"><span>45%</span></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+  </section>
+  <!-- video-area-end -->
+
+  <!-- blog-area -->
+  <!-- <section class="blog-area pt-120 pb-70 mt-170" >
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-xl-6 col-lg-7">
+                  <div class="section-title text-center mb-70">
+                      <h2 class="overlay-title">Latest Blog</h2>
+                      <span class="sub-title">Latest News & Blog</span>
+                      <h2 class="title">Update News & Articles</h2>
+                      <div class="line"><img src="img/images/title_line.png" alt=""></div>
+                  </div>
+              </div>
+          </div>
+          <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-6 col-sm-9">
+                  <div class="blog-post-item mb-50">
+                      <div class="blog-post-thumb mb-20">
+                          <a href="blog-details.html"><img src="img/blog/blog_post_thumb01.jpg" alt=""></a>
+                      </div>
+                      <div class="blog-post-content">
+                          <div class="tag"><a href="#">Creative Design</a></div>
+                          <h3><a href="blog-details.html">Car dealership, or vehicle local distribution</a></h3>
+                          <div class="blog-post-meta">
+                              <ul>
+                                  <li><i class="far fa-user"></i><a href="#">Jon Deo</a></li>
+                                  <li><i class="far fa-calendar-alt"></i> Mar 10, 2020</li>
+                                  <li class="read-more"><a href="blog-details.html"><i class="fas fa-angle-double-right"></i></a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-9">
+                  <div class="blog-post-item mb-50">
+                      <div class="blog-post-thumb mb-20">
+                          <a href="blog-details.html"><img src="img/blog/blog_post_thumb02.jpg" alt=""></a>
+                      </div>
+                      <div class="blog-post-content">
+                          <div class="tag"><a href="#">Creative Design</a></div>
+                          <h3><a href="blog-details.html">Based dealership contract with an automaker</a></h3>
+                          <div class="blog-post-meta">
+                              <ul>
+                                  <li><i class="far fa-user"></i><a href="#">Jon Deo</a></li>
+                                  <li><i class="far fa-calendar-alt"></i> Mar 10, 2020</li>
+                                  <li class="read-more"><a href="blog-details.html"><i class="fas fa-angle-double-right"></i></a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-9">
+                  <div class="blog-post-item mb-50">
+                      <div class="blog-post-thumb mb-20">
+                          <a href="blog-details.html"><img src="img/blog/blog_post_thumb03.jpg" alt=""></a>
+                      </div>
+                      <div class="blog-post-content">
+                          <div class="tag"><a href="#">Creative Design</a></div>
+                          <h3><a href="blog-details.html">Employ automobile sales their vehicles</a></h3>
+                          <div class="blog-post-meta">
+                              <ul>
+                                  <li><i class="far fa-user"></i><a href="#">Jon Deo</a></li>
+                                  <li><i class="far fa-calendar-alt"></i> Mar 10, 2020</li>
+                                  <li class="read-more"><a href="blog-details.html"><i class="fas fa-angle-double-right"></i></a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section> -->
+  <!-- blog-area-end -->
+
+  <!-- footer-brand-area -->
+  <div class="footer-brand-area">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-lg-4 col-md-6 order-2 order-md-0">
+                  <div class="footer-logo">
+                      <a href="/"><img src="{% static 'img/logo/tj_logo41.png' %}" style="width: 120%;"alt=""></a>
+                  </div>
+              </div>
+              <div class="col-lg-8 col-md-6">
+                  <div class="row footer-brand-active">
+                      <div class="col">
+                          <div class="footer-brand-item">
+                              <a href="#"><img src="{% static 'img/brand/footer_brand01.png' %}" alt=""></a>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="footer-brand-item">
+                              <a href="#"><img src="{% static 'img/brand/footer_brand02.png' %}" alt=""></a>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="footer-brand-item">
+                              <a href="#"><img src="{% static 'img/brand/footer_brand03.png' %}" alt=""></a>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="footer-brand-item">
+                              <a href="#"><img src="{% static 'img/brand/footer_brand04.png' %}" alt=""></a>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="footer-brand-item">
+                              <a href="#"><img src="{% static 'img/brand/footer_brand05.png' %}" alt=""></a>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="footer-brand-item">
+                              <a href="#"><img src="{% static 'img/brand/footer_brand03.png' %}" alt=""></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- footer-brand-area-end -->
+
+</main>
+<!-- main-area-end -->
+
+
+{% endblock content %}

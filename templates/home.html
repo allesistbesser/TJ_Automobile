@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TJ Automobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="{% static 'images/main_1.jpg' %}" data-addsearch="no_crop">
+  <link rel="shortcut icon" href="{% static 'img/favicon-32x32.png' %}" type="image/x-icon">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/flaticon.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/jarallax.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/nice-select.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/odometer.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/aos.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+  <!-- <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+  <script src="{% static 'fontawesomefree/js/fontawesome.js' %}"></script>
+  <script src="{% static 'fontawesomefree/js/solid.js' %}"></script>
+  <script src="{% static 'fontawesomefree/js/brands.js' %}"></script> -->
+</head>
+<body>
+  {% include 'navbar.html' %}
+
+
+    {% block content %}
+
+   
+
+    {% endblock content %}
+
+    {% include 'footer.html' %}
+    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'js/vendor/jquery-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.odometer.min.js' %}"></script>
+    <script src="{% static 'js/jquery.accrue.min.js' %}"></script>
+    <script src="{% static 'js/jquery.appear.js' %}"></script>
+    <script src="{% static 'js/jarallax.min.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/ajax-form.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
