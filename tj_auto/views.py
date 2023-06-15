@@ -10,3 +10,12 @@ def home(request):
        'category': categorys,
    }
   return render(request, 'index.html', context)
+
+def galerie(request):
+  allCars = Cars.objects.filter(status="published")
+  categorys = Category.objects.all()
+  context = {
+       'allCars': allCars,
+       'category': categorys,
+   }
+  return render(request, 'galerie.html', context)

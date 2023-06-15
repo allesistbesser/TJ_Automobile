@@ -47,12 +47,26 @@
               </div>
               <div class="navbar-wrap main-menu d-none d-lg-flex">
                 <ul class="navigation">
-                  {% if request.path != "/" %}
-                  <li class="active dropdown"><a href="index.html">Home</a> </li>
+                  {% if request.path == "/" %}
+                  <li class="active dropdown"><a href="/">Home</a> </li>
+                  {% else %}
+                  <li class="dropdown"><a href="/">Home</a> </li>
                   {% endif %}
-                  <li class="dropdown"><a href="#">Galerie</a></li>
-                  <li class="dropdown"><a href="#">Über uns</a></li>
-                  <li class="dropdown"><a href="#">Services</a></li>
+                  {% if request.path == "/galerie/" %}
+                  <li class="active dropdown"><a href="/galerie">Galerie</a></li>
+                  {% else %}
+                  <li class="dropdown"><a href="/galerie">Galerie</a></li>
+                  {% endif %}
+                  {% if request.path == "/about/" %}
+                  <li class="active dropdown"><a href="/about">Über uns</a></li>
+                  {% else %}
+                  <li class="dropdown"><a href="/about">Über uns</a></li>
+                  {% endif %}
+                  {% if request.path == "/services/" %}
+                  <li class="active dropdown"><a href="/services">Services</a></li>
+                  {% else %}
+                  <li class="dropdown"><a href="/services">Services</a></li>
+                  {% endif %}
                  
                 </ul>
               </div>
@@ -120,7 +134,7 @@
                                             </li>
                                         </ul>
                                     </li> -->
-                  <li class="header-btn"><a href="contact.html" class="btn">Kontakt</a></li>
+                  <li class="header-btn"><a href="/contact" class="btn">Kontakt</a></li>
                  
                 </ul>
               </div>
@@ -165,6 +179,7 @@
             </div>
         </div> -->
   </div>
+  <!-- Javascript -->
   <script>
     function guncelSaatGoster() {
       var saatElementi = document.getElementById('saat');
