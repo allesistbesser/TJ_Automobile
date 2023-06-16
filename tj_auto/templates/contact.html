@@ -1,0 +1,136 @@
+{% extends 'home.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- breadcrumb-area -->
+<section class="breadcrumb-area breadcrumb-bg" data-background="{% static 'img/bg/breadcrumb_bg.jpg' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="breadcrumb-content text-center">
+          <h2>Kontakt uns</h2>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- breadcrumb-area-end -->
+
+<!-- contact-area -->
+<section class="contact-area pt-120">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-5 col-lg-6">
+        <div class="contact-info-wrap">
+          <div class="section-title text-left mb-25">
+            <span class="sub-title">Kontaktinformationen</span>
+            <h2 class="title">Unsere Adresse</h2>
+            <div class="line"><img src="{% static 'img/images/title_line.png' %}" alt=""></div>
+          </div>
+          <p></p>
+          <ul class="contact-info-list">
+            <li>
+              <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="content">
+                <h5>Firmenbüro</h5>
+                <p>Hoffmann str. 38 , 32105, Bad Salzuflen</p>
+              </div>
+            </li>
+            <li>
+              <div class="icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="content">
+                <h5>Hotline-Nummer</h5>
+                <p><a href="#">0174 985 13 67</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="icon"><i class="far fa-envelope"></i></div>
+              <div class="content">
+                <h5>Stellen Sie Ihre Frage</h5>
+                <p><a href="mailto:jaffal@hotmail.de" target="_blank"><span class="__cf_email__"
+                      data-cfemail="e1888f878ea1929491918e9395cf828e8c">E-Mail senden</span></a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- contact bild -->
+      <div class="col-xl-4 col-lg-4">
+        <img src="{% static '../static/img/images/contact1.jpg' %}" alt="">
+      </div>
+    
+
+    </div>
+  </div>
+</section>
+<!-- contact-area-end -->
+
+
+    <div class="container mt-50">
+      <div class="row justify-content-between">
+
+        <div class="col-md-8 col-xl-8 col-lg-8">
+          <div id="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2452.2300586244355!2d8.74939767658759!3d52.075541769040846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba6ad9c68c6689%3A0x5c9f02cce4c4372e!2sHoffmannstra%C3%9Fe%2038%2C%2032105%20Bad%20Salzuflen!5e0!3m2!1sde!2sde!4v1686927243575!5m2!1sde!2sde"
+              width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+         <!-- öffnungszeiten -->
+      <div style="font-size: 1.2rem;line-height: 2;">
+        <head>
+          <title>Öffnungszeiten</title>
+        </head>
+        <table>
+          <tr>
+            <th>Tag</th>
+            <th>Öffnungszeiten</th>
+          </tr>
+          <tr>
+            <td>Montag</td>
+            <td>09:00–17:30 Uhr</td>
+          </tr>
+          <tr>
+            <td>Dienstag</td>
+            <td>09:00–17:30 Uhr</td>
+          </tr>
+          <tr>
+            <td>Mittwoch</td>
+            <td>09:00–17:30 Uhr</td>
+          </tr>
+          <tr>
+            <td>Donnerstag</td>
+            <td>09:00–17:30 Uhr</td>
+          </tr>
+          <tr>
+            <td>Freitag</td>
+            <td>09:00–17:30 Uhr</td>
+          </tr>
+          <tr>
+            <td>Samstag</td>
+            <td>09:00–14:30 Uhr</td>
+          </tr>
+          <tr>
+            <td>Sonntag</td>
+            <td>Geschlossen</td>
+          </tr>
+        </table>
+      </div>
+
+      </div>
+    </div>
+
+     
+
+
+
+
+{% endblock content %}

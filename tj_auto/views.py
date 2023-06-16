@@ -19,3 +19,11 @@ def galerie(request):
        'category': categorys,
    }
   return render(request, 'galerie.html', context)
+
+
+def about(request):
+  return render(request, 'about_us.html')
+
+
+def contact(request):
+  return render(request, 'contact.html')
