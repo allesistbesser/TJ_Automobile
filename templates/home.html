@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% load static %}
+{% load static %}
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:image" content="{% static 'images/main_1.jpg' %}" data-addsearch="no_crop">
   <link rel="shortcut icon" href="{% static 'img/favicon-32x32.png' %}" type="image/x-icon">
-  
+
   <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
@@ -24,6 +25,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
 
   <!-- <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
   <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
@@ -31,56 +33,61 @@
   <script src="{% static 'fontawesomefree/js/fontawesome.js' %}"></script>
   <script src="{% static 'fontawesomefree/js/solid.js' %}"></script>
   <script src="{% static 'fontawesomefree/js/brands.js' %}"></script> -->
+ 
 </head>
+
 <body>
-    <!-- preloader-start -->
-    <div class="preloader">
-      <div class="meter">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="subline"></div>
-          <div class="subline"></div>
-          <div class="subline"></div>
-          <div class="subline"></div>
-          <div class="subline"></div>
-          <div class="loader-circle-1">
-              <div class="loader-circle-2"></div>
-          </div>
-          <span class="loadtext">Loading</span>
+  <!-- preloader-start -->
+  <div class="preloader">
+    <div class="meter">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="subline"></div>
+      <div class="subline"></div>
+      <div class="subline"></div>
+      <div class="subline"></div>
+      <div class="subline"></div>
+      <div class="loader-circle-1">
+        <div class="loader-circle-2"></div>
       </div>
+      <span class="loadtext">Loading</span>
+    </div>
   </div>
   <!-- preloader-end -->
   {% include 'navbar.html' %}
+  
+
+  {% block content %}
 
 
-    {% block content %}
 
-   
+  {% endblock content %}
 
-    {% endblock content %}
-
-    {% include 'footer.html' %}
-    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'js/vendor/jquery-3.5.0.min.js' %}"></script>
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
-    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
-    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'js/jquery.odometer.min.js' %}"></script>
-    <script src="{% static 'js/jquery.accrue.min.js' %}"></script>
-    <script src="{% static 'js/jquery.appear.js' %}"></script>
-    <script src="{% static 'js/jarallax.min.js' %}"></script>
-    <script src="{% static 'js/slick.min.js' %}"></script>
-    <script src="{% static 'js/ajax-form.js' %}"></script>
-    <script src="{% static 'js/wow.min.js' %}"></script>
-    <script src="{% static 'js/aos.js' %}"></script>
-    <script src="{% static 'js/plugins.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+  {% include 'footer.html' %}
+  <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="{% static 'js/vendor/jquery-3.5.0.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.odometer.min.js' %}"></script>
+  <script src="{% static 'js/jquery.accrue.min.js' %}"></script>
+  <script src="{% static 'js/jquery.appear.js' %}"></script>
+  <script src="{% static 'js/jarallax.min.js' %}"></script>
+  <script src="{% static 'js/slick.min.js' %}"></script>
+  <script src="{% static 'js/ajax-form.js' %}"></script>
+  <script src="{% static 'js/wow.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/plugins.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/index.js' %}"></script>
 </body>
+
 </html>

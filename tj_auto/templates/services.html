@@ -1,0 +1,160 @@
+{% extends 'home.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!-- breadcrumb-area -->
+<section class="breadcrumb-area breadcrumb-bg mt-120 pt-50 pb-5" data-background="{% static 'img/bg/breadcrumb_bg.jpg' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="breadcrumb-content text-center">
+          <h2>Reparaturdienst</h2>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><i class="fas fa-tools"></i></li>
+              <li class="breadcrumb-item" aria-current="page"><i class="fas fa-toolbox"></i></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- breadcrumb-area-end -->
+
+<!-- inner-about-area -->
+<section class="inner-about-area gray-lite-bg pt-40 pb-60">
+    <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="inner-about-img mb-75">
+          <img src="{% static 'img/images/about_img.jpg' %}" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-10">
+        <div class="inner-about-content mb-60">
+          <div class="section-title mb-25">
+            <span class="sub-title">Über unsere Firma</span>
+            <h2 class="title">Mehr zum Auto hier<span>.</span></h2>
+            <div class="line"><img src="{% static 'img/images/title_line.png' %}" alt=""></div>
+          </div>
+          <p>Alle Wartungs- und Reparaturarbeiten an Ihren Fahrzeugen werden mit größter Sorgfalt durchgeführt.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-8">
+        <div class="about-features-item">
+          <div class="icon">
+            <i class="flaticon-fan"></i>
+          </div>
+          <div class="content">
+            <h5>KLIMAANLAGE</h5>
+            <p>Hier wird Text geschrieben</p>
+          </div>
+        </div>
+        <div class="about-features-item">
+          <div class="icon">
+            <!-- <i class="flaticon-piston"></i> -->
+            <i class="fas fa-cog"></i>
+          </div>
+          <div class="content">
+            <h5>Reifenwechsel</h5>
+            <p>Hier wird Text geschrieben</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-8">
+        <div class="about-features-item">
+          <div class="icon">
+            <i class="flaticon-belt"></i>
+          </div>
+          <div class="content">
+            <h5>Zahnriemenwechsel</h5>
+            <p>Hier wird Text geschrieben</p>
+          </div>
+        </div>
+        <div class="about-features-item">
+          <div class="icon">
+            <i class="flaticon-jerrycan"></i>
+          </div>
+          <div class="content">
+            <h5>ÖLWECHSEL</h5>
+            <p>Hier wird Text geschrieben</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- inner-about-area-end -->
+
+<!-- faq-area -->
+<div class="col-12 mt-40">
+  <div class="breadcrumb-content text-center">
+    <h3>FAQ - Häufig gestellte Fragen</h3>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><i class="fas fa-question-circle"></i></li>
+        <li class="breadcrumb-item" aria-current="page"><i class="far fa-question-circle"></i></li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<div class="faq-area position-relative fix pt-120 pb-120">
+    <div class="container">
+        <div class="row">
+      <div class="col-lg-6 order-0 order-lg-2">
+        <div class="faq-img">
+          <img src="{% static 'img/images/faq_img.jpg' %}" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="faq-wrap">
+          <div class="faq-set active">
+            <a class="active" href="#">Bieten Sie eine Garantie an?<i class="fas fa-minus"></i></a>
+            <div class="content" style="display: block;">
+              <p>Lorem ipsum, or lipsum as it is sometimes known dummy text used in laying out print, graphic web
+                The passage is attributed</p>
+            </div>
+          </div>
+          <div class="faq-set">
+            <a href="#">Was ist automatische Detaillierung?<i class="fas fa-plus"></i></a>
+            <div class="content">
+              <p>Lorem ipsum, or lipsum as it is sometimes known dummy text used in laying out print, graphic web
+                The passage is attributed</p>
+            </div>
+          </div>
+          <div class="faq-set">
+            <a href="#">Ist es dringend erforderlich, ein Ölleck zu beheben?<i class="fas fa-plus"></i></a>
+            <div class="content">
+              <p>Lorem ipsum, or lipsum as it is sometimes known dummy text used in laying out print, graphic web
+                The passage is attributed</p>
+            </div>
+          </div>
+          <div class="faq-set">
+            <a href="#">Wie prüfe ich meinen Reifendruck?<i class="fas fa-plus"></i></a>
+            <div class="content">
+              <p>Lorem ipsum, or lipsum as it is sometimes known dummy text used in laying out print, graphic web
+                The passage is attributed</p>
+            </div>
+          </div>
+          <div class="faq-set">
+            <a href="#">Wo kauft man Ersatzteile?<i class="fas fa-plus"></i></a>
+            <div class="content">
+              <p>Lorem ipsum, or lipsum as it is sometimes known dummy text used in laying out print, graphic web
+                The passage is attributed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="faq-bg-dots" data-background="{% static 'img/bg/faq_dots_bg.jpg' %}"></div>
+</div>
+<!-- faq-area-end -->
+
+{% endblock content %}

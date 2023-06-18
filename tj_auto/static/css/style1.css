@@ -1,0 +1,33 @@
+#welcome-message {
+  position: absolute;
+  z-index: 10;
+  top: 100px;
+  right: 500px;
+  opacity: 0;
+  font-size: 26px;
+  color: rgb(228, 122, 15);
+  text-shadow: 2px 2px 2px rgb(217, 223, 208);
+  font-weight: 1000;
+  animation: welcome 10s linear infinite;
+  animation-iteration-count: 1;
+}
+
+@keyframes welcome {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.50;
+  }
+  75% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
