@@ -38,7 +38,7 @@ class FirmenInfos(models.Model):
   twitterLink = models.CharField(max_length=1000, blank=True)
   
   def __str__(self):
-        return f'wichtige info'
+        return f'wichtige info von {self.email}'
        
 class OpeningHours(models.Model):
     day = models.CharField(max_length=20)
