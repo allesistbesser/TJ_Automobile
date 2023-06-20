@@ -1,18 +1,21 @@
 {% load static %}
+
 <head>
     <style>
-        table, th , td{
-        border: 3px solid rgb(188, 185, 185);
-        padding: 7px;
-        text-align: center;
-        color: rgb(254, 254, 254);
-      }
-      </style>
+        table,
+        th,
+        td {
+            border: 3px solid rgb(188, 185, 185);
+            padding: 7px;
+            text-align: center;
+            color: rgb(254, 254, 254);
+        }
+    </style>
 </head>
 
 
-  <!-- footer-area -->
-  <footer class="footer-bg" data-background="img/bg/footer_bg.jpg">
+<!-- footer-area -->
+<footer class="footer-bg" data-background="img/bg/footer_bg.jpg">
     <div class="footer-top-area">
         <div class="container">
             <div class="row">
@@ -31,21 +34,24 @@
                                     <div class="icon"><i class="fas fa-phone"></i></div>
                                     <div class="content">
                                         <span>Telefonnummer</span>
-                                        <p>0174 985 13 67</p>
+                                        <p>{{firmaInfo.phone}}</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="icon"><i class="fas fa-envelope"></i></div>
                                     <div class="content">
                                         <span>jaffal@hotmail.de</span>
-                                        <p><a href="mailto:jaffal@hotmail.de" target="_blank"><span class="__cf_email__" data-cfemail="91f8fff7fed1e2e4e1e1fee3e5bff2fefc">E-Mail senden</span></a></p>
+                                        <p><a href="mailto:{{firmaInfo.email}}" target="_blank"><span
+                                                    class="__cf_email__"
+                                                    data-cfemail="91f8fff7fed1e2e4e1e1fee3e5bff2fefc">E-Mail
+                                                    senden</span></a></p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
                                     <div class="content">
                                         <span>Addresse</span>
-                                        <p>Hoffmann str. 38 , 32105, Bad Salzuflen</p>
+                                        <p>{{firmaInfo.adresse}}</p>
                                     </div>
                                 </li>
                             </ul>
@@ -62,11 +68,11 @@
                                     </div>
                                     <div class="fw-link">
                                         <ul>
-                                            <li><a href="#">Über Uns</a></li>
-                                            <li><a href="#">Unsere Service</a></li>
-                                          
-                                            <li><a href="#">Galerie</a></li>
-                                            <li><a href="#">Kontakt</a></li>
+                                            <li><a href="/about">Über Uns</a></li>
+                                            <li><a href="/services">Unsere Service</a></li>
+
+                                            <li><a href="/galerie">Galerie</a></li>
+                                            <li><a href="/contact">Kontakt</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -78,52 +84,31 @@
                                     </div>
                                     <div class="fw-link">
                                         <ul>
-                                            <li><a href="https://home.mobile.de/JAFFAL-AUTOMOBILE#ses" target="_blank">Wir in Mobil.de</a></li>
+                                            <li><a href="https://home.mobile.de/JAFFAL-AUTOMOBILE#ses"
+                                                    target="_blank">Wir in Mobil.de</a></li>
                                             <li><a href="https://www.adac.de" target="_blank">ADAC</a></li>
-                                            <li><a href="https://www.kreis-lippe.de/kreis-lippe/verwaltung-und-service/buergerservice/kreisverwaltung/strassenverkehrsamt.php" target="_blank">Straßenverkehrsamt</a></li>
-                                          
+                                            <li><a href="https://www.kreis-lippe.de/kreis-lippe/verwaltung-und-service/buergerservice/kreisverwaltung/strassenverkehrsamt.php"
+                                                    target="_blank">Straßenverkehrsamt</a></li>
+
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <!-- öffnungszeiten -->
-                            <div >
-                                
-                                <table >
-                                  <tr>
-                                    <th>Tag</th>
-                                    <th>Öffnungszeiten</th>
-                                  </tr>
-                                  <tr>
-                                    <td>Montag</td>
-                                    <td>09:00–17:30 Uhr</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Dienstag</td>
-                                    <td>09:00–17:30 Uhr</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Mittwoch</td>
-                                    <td>09:00–17:30 Uhr</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Donnerstag</td>
-                                    <td>09:00–17:30 Uhr</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Freitag</td>
-                                    <td>09:00–17:30 Uhr</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Samstag</td>
-                                    <td>09:00–14:30 Uhr</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Sonntag</td>
-                                    <td>Geschlossen</td>
-                                  </tr>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <th>Tag</th>
+                                        <th>Öffnungszeiten</th>
+                                    </tr>
+                                    {% for item in openHours %}
+                                    <tr>
+                                        <td>{{item.day}}</td>
+                                        <td>{{item.hours}}</td>
+                                    </tr>
+                                    {% endfor %}
                                 </table>
-                              </div>
+                            </div>
                             <div class="col-xl-5 col-lg-6 col-md-6">
                                 <div class="footer-widget mb-50">
                                     <!-- <div class="fw-title mb-30">
@@ -137,8 +122,10 @@
                                     </div> -->
                                     <div class="footer-social">
                                         <ul>
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="{{firmaInfo.facebookLink}}" target="_blank"><i
+                                                        class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="{{firmaInfo.twitterLink}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                            </li>
                                             <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
                                             <!-- <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li> -->
                                         </ul>
@@ -165,6 +152,7 @@
                 <div class="col-md-8">
                     <div class="copyright-text">
                         <p>Copyright © 2023. All rights reserved</p>
+                        <a href="https://www.linkedin.com/in/mesuttepebas/" target="_blank"> WebMaster & Mesut</a>
                     </div>
                 </div>
                 <div class="col-md-4">

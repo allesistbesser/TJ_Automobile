@@ -37,6 +37,7 @@
 </head>
 
 <body>
+ 
   <!-- preloader-start -->
   <div class="preloader">
     <div class="meter">
@@ -58,16 +59,19 @@
     </div>
   </div>
   <!-- preloader-end -->
-  {% include 'navbar.html' %}
   
-
+  
+  {% include 'navbar.html' %}
+ 
+  
   {% block content %}
 
 
-
+ 
   {% endblock content %}
 
   {% include 'footer.html' %}
+  
   <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="{% static 'js/vendor/jquery-3.5.0.min.js' %}"></script>
   <script src="{% static 'js/popper.min.js' %}"></script>

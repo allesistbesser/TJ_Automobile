@@ -1,3 +1,37 @@
+/* kayan yazilar */
+.bilgi_bolumu {
+  background-color: rgb(244, 77, 11);
+  padding: 10px;
+  overflow: hidden;
+  color: white;
+  position: relative;
+  z-index: 9999; /* Yüksek bir z-index değeri atadık */
+}
+
+
+#bilgi_listesi {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  animation: kayanBilgiler 30s linear infinite;
+}
+
+#bilgi_listesi li {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: 100;
+  text-shadow: 2px 2px 2px rgb(72, 70, 70);
+}
+
+@keyframes kayanBilgiler {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+
 #welcome-message {
   position: absolute;
   z-index: 10;
@@ -31,3 +65,4 @@
     opacity: 0;
   }
 }
+

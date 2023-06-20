@@ -8,9 +8,9 @@
         <div class="col-md-6 d-none d-md-block">
           <div class="header-top-action">
             <ul>
-              <li><i class="far fa-envelope"></i><a href="mailto:jaffal@hotmail.de" target="_blank"><span
+              <li><i class="far fa-envelope"></i><a href="mailto:{{firmaInfo.email}}" target="_blank"><span
                     class="__cf_email__" data-cfemail="e1888f878ea1929491918e9395cf828e8c">E-Mail senden</span></a></li>
-              <li> <i class="fas fa-bullhorn"></i><i id="visit1">Willkommen auf unsere Webseite</i></li>
+              <li> <i class="fas fa-bullhorn"></i><i id="visit1">Herzlich Willkommen</i></li>
               <li><i class="far fa-clock"></i><i id="saat"></i> </li>
             </ul>
           </div>
@@ -19,8 +19,8 @@
           <div class="header-top-right">
             <ul>
               <li class="header-top-social">
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="{{firmaInfo.facebookLink}}" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="{{firmaInfo.twitterLink}}" target="_blank"><i class="fab fa-twitter-square"></i></a>
                 <!-- <a href="#"><i class="fab fa-vimeo-square"></i></a> -->
                 <!-- <a href="#"><i class="fab fa-linkedin"></i></a> -->
               </li>
@@ -34,6 +34,15 @@
       </div>
     </div>
   </div>
+  <!-- wichtige informtion -->
+  {% if firmaInfo.wichtigeInfo %}
+  <div class="bilgi_bolumu">
+    <ul id="bilgi_listesi">
+      <li>{{firmaInfo.wichtigeInfo}}</li>
+     </ul>
+  </div>
+  {% endif %}
+  <!-- wichtige informtion -->
   <div id="sticky-header" class="main-header menu-area">
     <div class="container custom-container">
       <div class="row">
@@ -205,4 +214,5 @@
 
   </script>
 </header>
+
 <!-- header-area-end -->

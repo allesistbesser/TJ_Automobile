@@ -14,9 +14,9 @@
     var visitDuration = Math.floor((currentTime - visitStartTime) / 1000 / 60); // Ziyaret süresi dakika cinsinden hesaplanır
     // console.log("Ziyaret Süresi: " + visitDuration + " dakika");
     if (visitDuration < 1) {
-      document.querySelector("#visit1").innerHTML = "Willkommen auf unserer Webseite"
+      document.querySelector("#visit1").innerHTML = "Herzlich Willkommen"
     } else {
-      document.querySelector("#visit1").innerHTML = "Sie sind seit " + visitDuration + "​ ​Minuten auf unserer Seite"
+      document.querySelector("#visit1").innerHTML = "Online seit " +visitDuration + " Minuten"
     }
  
     // İstenilen işlemler buraya eklenebilir, örneğin, ziyaret süresini sayfada göstermek için bir HTML elementini güncelleyebilirsiniz

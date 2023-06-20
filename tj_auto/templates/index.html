@@ -3,7 +3,16 @@
 
 
 {% block content %}
+<style>
+    .footer-brand-area img {
+        height: 70px;
+    }
+    .slider-content .title1{
+        font-size: 38px;
+    }
+</style>
 <div id="welcome-message">Herzlich Willkommen !</div>
+
  <!-- main-area -->
  <main>
 
@@ -19,9 +28,9 @@
               </div>
               <div class="col-xl-5 col-lg-6">
                   <div class="slider-content">
-                      <span class="wow fadeInUp" data-wow-delay=".3s">BESTER AUTOHÄNDLER</span>
-                      <h3 class="wow fadeInUp" data-wow-delay=".6s">Finden Sie bei uns das perfekte Auto</h3>
-                      <p class="wow fadeInUp" data-wow-delay=".9s"></p>
+                      <span class="wow fadeInUp title1" data-wow-delay=".3s">JAFFAL AUTOMOBILE</span>
+                      <h3 class="wow fadeInUp" data-wow-delay=".6s">BESTER AUTOHÄNDLER</h3>
+                      <p class="wow fadeInUp" data-wow-delay=".9s">Finden Sie bei uns das perfekte Auto</p>
                       <a href="#" class="btn wow fadeInUp scroll-to-target" data-wow-delay="1.2s" data-target="#cars-area"><span>+</span> entdecke mehr</a>
                   </div>
               </div>
@@ -66,6 +75,7 @@
                           <div class="latest-car-content-top">
                               <h5><a href="{{item.link}}" target="_blank">{{item.title}}</a></h5>
                               <span class="price">{{item.category}}</span>
+                          
                           </div>
                           <p><span></span></p>
                           <div class="latest-car-thumb mt-30 mb-25">
@@ -390,8 +400,8 @@
               <div class="row align-items-center justify-content-between">
                   <div class="col-xl-5 col-lg-4 order-0 order-lg-2">
                       <div class="video-play-icon">
-                          <a href="https://www.youtube.com/watch?v=c_QoZtzXlm4" class="popup-video"><i class="fas fa-play"></i>Video
-                              showcase 02:45</a>
+                          <a href="{% static 'video/mercedes_s_klasse.mp4' %}" class="popup-video"><i class="fas fa-play"></i>Video
+                              showcase 03:39</a>
                       </div>
                   </div>
                   <div class="col-xl-6 col-lg-8">
@@ -532,32 +542,37 @@
                 <div class="row footer-brand-active">
                     <div class="col">
                         <div class="footer-brand-item">
-                            <a href="#"><img src="{% static 'img/brand/footer_brand01.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/brand/mercedes1.png' %}" alt=""></a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="footer-brand-item">
-                            <a href="#"><img src="{% static 'img/brand/footer_brand02.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/brand/bmw1.png' %}" alt=""></a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="footer-brand-item">
-                            <a href="#"><img src="{% static 'img/brand/footer_brand03.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/brand/audi1.png' %}" alt=""></a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="footer-brand-item">
-                            <a href="#"><img src="{% static 'img/brand/footer_brand04.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/brand/vw1.png' %}" alt=""></a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="footer-brand-item">
-                            <a href="#"><img src="{% static 'img/brand/footer_brand05.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/brand/toyota1.png' %}" alt=""></a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="footer-brand-item">
-                            <a href="#"><img src="{% static 'img/brand/footer_brand03.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/brand/renault1.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-brand-item">
+                            <a href="#"><img src="{% static 'img/brand/opel1.png' %}" alt=""></a>
                         </div>
                     </div>
                 </div>
