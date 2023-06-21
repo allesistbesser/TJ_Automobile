@@ -7,145 +7,120 @@
     .footer-brand-area img {
         height: 70px;
     }
-    .slider-content .title1{
+
+    .slider-content .title1 {
         font-size: 38px;
     }
 </style>
 <div id="welcome-message">Herzlich Willkommen !</div>
 
- <!-- main-area -->
- <main>
+<!-- main-area -->
+<main>
 
-  <!-- banner-area -->
-  <section class="banner-area fix" data-background="{% static 'img/slider/banner_bg.jpg' %}">
-      <div class="container custom-container">
-          <div class="row align-items-center justify-content-between">
-              <div class="col-lg-6 order-0 order-lg-2">
-                  <div class="banner-img">
-                      <img src="{% static 'img/slider/mercedes_eq1.png' %}" style="width: 700px;" alt="">
-                      <img class="banner-shape" src="{% static 'img/slider/banner_shape.png' %}" alt="">
-                  </div>
-              </div>
-              <div class="col-xl-5 col-lg-6">
-                  <div class="slider-content">
-                      <span class="wow fadeInUp title1" data-wow-delay=".3s">T.J. Automobile</span>
-                      <h3 class="wow fadeInUp" data-wow-delay=".6s">BESTER AUTOHÄNDLER</h3>
-                      <p class="wow fadeInUp" data-wow-delay=".9s">Finden Sie bei uns das perfekte Auto</p>
-                      <a href="#" class="btn wow fadeInUp scroll-to-target" data-wow-delay="1.2s" data-target="#cars-area"><span>+</span> entdecke mehr</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="banner-overlay-text">Autohändler und Service</div>
-      <div class="banner-line-wrap">
-          <span class="line-one"></span>
-          <span class="line-two"></span>
-      </div>
-  </section>
-  <!-- banner-area-end -->
+    <!-- banner-area -->
+    <section class="banner-area fix" data-background="{% static 'img/slider/banner_bg.jpg' %}">
+        <div class="container custom-container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 order-0 order-lg-2">
+                    <div class="banner-img">
+                        <img src="{% static 'img/slider/mercedes_eq1.png' %}" style="width: 700px;" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-6">
+                    <div class="slider-content">
+                        <span class="wow fadeInUp title1" data-wow-delay=".3s">T.J. Automobile</span>
+                        <h3 class="wow fadeInUp" data-wow-delay=".6s">BESTER AUTOHÄNDLER</h3>
+                        <p class="wow fadeInUp" data-wow-delay=".9s">Finden Sie bei uns das perfekte Auto</p>
+                        <a href="#" class="btn wow fadeInUp scroll-to-target" data-wow-delay="1.2s"
+                            data-target="#cars-area"><span>+</span> entdecke mehr</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-overlay-text">Autohändler und Service</div>
+        <div class="banner-line-wrap">
+            <span class="line-one"></span>
+            <span class="line-two"></span>
+        </div>
+    </section>
+    <!-- banner-area-end -->
 
-<!-- latest-cars-area -->
-<section class="latest-cars-area gray-lite-bg pt-50 pb-70" id="cars-area">
-  <div class="container">
-      <div class="row justify-content-center">
-          <div class="col-xl-5 col-lg-6">
-              <div class="section-title text-center mb-35">
-                  <!-- <h2 class="overlay-title">All Seller</h2>
+    <!-- latest-cars-area -->
+    <section class="latest-cars-area gray-lite-bg pt-50 pb-70" id="cars-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="section-title text-center mb-35">
+                        <!-- <h2 class="overlay-title">All Seller</h2>
                   <span class="sub-title">our Featured Cars</span> -->
-                  <h2 class="title">Unsere Favoriten/Empfehlungen</h2>
-              </div>
-              <div class="latest-car-menu-wrap">
-                  <div class="latest-car-menu-active">
-                      <button class="active" data-filter="*">alles</button>
+                        <h2 class="title">Unsere Favoriten/Empfehlungen</h2>
+                    </div>
+                    <div class="latest-car-menu-wrap">
+                        <div class="latest-car-menu-active">
+                            <button class="active" data-filter="*">alles</button>
 
-                      {% for item in category %}
-                      <button class="" data-filter=".{{item.name}}">{{item.name}}</button>
-                      {% endfor %}
-                     
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="latest-cars-wrapper">
-          <div class="row latest-car-items-active">
-            {% for item in featured %}
-              <div class="col-lg-4 col-md-6 grid-item grid-sizer {{item.category}}">
-                  <div class="latest-car-item mb-50">
-                      <div class="latest-car-content">
-                          <div class="latest-car-content-top">
-                              <h5><a href="{{item.link}}" target="_blank">{{item.title}}</a></h5>
-                              <span class="price">{{item.category}}</span>
-                          
-                          </div>
-                          <p><span></span></p>
-                          <div class="latest-car-thumb mt-30 mb-25">
-                              <a href="{{item.link}}" target="_blank">
-                                  <img src="/media/{{item.image}}" alt="{{item.title}}">
-                              </a>
-                          </div>
-                          <div class="latest-car-meta">
-                              <ul>
-                                  <li><i class="flaticon-settings"></i> Klicken Sie auf das Bild für detaillierte Informationen</li>
-                                  <!-- <li><i class="flaticon-gasoline-pump"></i> </li> -->
-                                  <!-- <li><i class="flaticon-motorway"></i></li> -->
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              {% endfor %}
-             
-          </div>
-      </div>
-  </div>
-</section>
-<!-- latest-cars-area-end -->
+                            {% for item in category %}
+                            <button class="" data-filter=".{{item.name}}">{{item.name}}</button>
+                            {% endfor %}
 
-  <!-- services-area -->
-  <section class="best-services-area">
-      <div class="container-fluid p-0 fix">
-          <div class="row no-gutters justify-content-center">
-              <div class="col-xl-6 col-lg-12 col-md-6 col-sm-9">
-                  <div class="best-services-item">
-                      <div class="best-services-thumb">
-                          <img src="{% static 'img/images/best_services_img01.jpg' %}" alt="best services">
-                      </div>
-                      <div class="best-services-content" data-background="{% static 'img/bg/best_services_bg01.jpg' %}">
-                          <ul class="meta">
-                              <li><a href="/services">Gebrauchtwagen</a></li>
-                              <li><a href="/services">Brandneu</a></li>
-                             
-                          </ul>
-                          <h3><a href="/services">Erweiterter Fahrzeug Reparatur Service</a></h3>
-                          <!-- <div class="rating">
-                              <ul>
-                                  <li>
-                                      <i class="far fa-star"></i>
-                                      <i class="far fa-star"></i>
-                                      <i class="far fa-star"></i>
-                                      <i class="far fa-star"></i>
-                                      <i class="far fa-star"></i>
-                                  </li>
-                                  <li>- ( 5.0 Reviews )</li>
-                              </ul>
-                          </div>
-                          <h2 class="price">$23500</h2>
-                          <a href="#" class="read-more btn">Buy Now</a> -->
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-6 col-lg-12 col-md-6 col-sm-9">
-                  <div class="best-services-item">
-                      <div class="best-services-thumb">
-                          <img src="{% static 'img/images/best_services_img02.jpg' %}" alt="">
-                      </div>
-                      <div class="best-services-content bg-2" data-background="{% static 'img/bg/best_services_bg02.jpg' %}">
-                          <ul class="meta">
-                              <li><a href="/services">Motor</a></li>
-                              <li><a href="/services">Brandneu</a></li>
-                          </ul>
-                          <h3><a href="/services">Service 1 Jahre Garantie</a></h3>
-                          <!-- <div class="rating">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="latest-cars-wrapper">
+                <div class="row latest-car-items-active">
+                    {% for item in featured %}
+                    <div class="col-lg-4 col-md-6 grid-item grid-sizer {{item.category}}">
+                        <div class="latest-car-item mb-50">
+                            <div class="latest-car-content">
+                                <div class="latest-car-content-top">
+                                    <h5><a href="{{item.link}}" target="_blank">{{item.title}}</a></h5>
+                                    <span class="price">{{item.category}}</span>
+
+                                </div>
+                                <p><span></span></p>
+                                <div class="latest-car-thumb mt-30 mb-25">
+                                    <a href="{{item.link}}" target="_blank">
+                                        <img src="/media/{{item.image}}" alt="{{item.title}}">
+                                    </a>
+                                </div>
+                                <div class="latest-car-meta">
+                                    <ul>
+                                        <li><i class="flaticon-settings"></i> Klicken Sie auf das Bild für detaillierte
+                                            Informationen</li>
+                                        <!-- <li><i class="flaticon-gasoline-pump"></i> </li> -->
+                                        <!-- <li><i class="flaticon-motorway"></i></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- latest-cars-area-end -->
+
+    <!-- services-area -->
+    <section class="best-services-area">
+        <div class="container-fluid p-0 fix">
+            <div class="row no-gutters justify-content-center">
+                <div class="col-xl-6 col-lg-12 col-md-6 col-sm-9">
+                    <div class="best-services-item">
+                        <div class="best-services-thumb">
+                            <img src="{% static 'img/images/best_services_img01.jpg' %}" alt="best services">
+                        </div>
+                        <div class="best-services-content"
+                            data-background="{% static 'img/bg/best_services_bg01.jpg' %}">
+                            <ul class="meta">
+                                <li><a href="/services">Gebrauchtwagen</a></li>
+                                <li><a href="/services">Brandneu</a></li>
+
+                            </ul>
+                            <h3><a href="/services">Erweiterter Fahrzeug Reparatur Service</a></h3>
+                            <!-- <div class="rating">
                               <ul>
                                   <li>
                                       <i class="far fa-star"></i>
@@ -159,38 +134,68 @@
                           </div>
                           <h2 class="price">$23500</h2>
                           <a href="#" class="read-more btn">Buy Now</a> -->
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  <!-- services-area-end -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-12 col-md-6 col-sm-9">
+                    <div class="best-services-item">
+                        <div class="best-services-thumb">
+                            <img src="{% static 'img/images/best_services_img02.jpg' %}" alt="">
+                        </div>
+                        <div class="best-services-content bg-2"
+                            data-background="{% static 'img/bg/best_services_bg02.jpg' %}">
+                            <ul class="meta">
+                                <li><a href="/services">Motor</a></li>
+                                <li><a href="/services">Brandneu</a></li>
+                            </ul>
+                            <h3><a href="/services">Service 1 Jahre Garantie</a></h3>
+                            <!-- <div class="rating">
+                              <ul>
+                                  <li>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                      <i class="far fa-star"></i>
+                                  </li>
+                                  <li>- ( 5.0 Reviews )</li>
+                              </ul>
+                          </div>
+                          <h2 class="price">$23500</h2>
+                          <a href="#" class="read-more btn">Buy Now</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- services-area-end -->
 
-  
 
-  <!-- video-area -->
-  <section class="video-area mt-50 mb-50">
-      <div class="video-bg" data-background="{% static 'img/bg/video_bg.jpg' %}"></div>
-      <div class="container">
-          <div class="video-area-wrap">
-              <div class="row align-items-center justify-content-between">
-                  <div class="col-xl-5 col-lg-4 order-0 order-lg-2">
-                      <div class="video-play-icon">
-                          <a href="{% static 'video/mercedes_s_klasse.mp4' %}" class="popup-video"><i class="fas fa-play"></i>Video
-                              showcase 03:39</a>
-                      </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-8">
-                      <div class="section-title white-title">
-                          <span class="display-3 text-danger">Über unsere Firma</span>
-                          <!-- <h2 class="title">More for trade-in could increase car here<span>.</span></h2> -->
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- <div class="container">
+
+    <!-- video-area -->
+    <section class="video-area mt-50 mb-50">
+        <div class="video-bg" data-background="{% static 'img/bg/video_bg.jpg' %}"></div>
+        <div class="container">
+            <div class="video-area-wrap">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-5 col-lg-4 order-0 order-lg-2">
+                        <div class="video-play-icon">
+                            <a href="{% static 'video/mercedes_s_klasse.mp4' %}" class="popup-video"><i
+                                    class="fas fa-play"></i>Video
+                                showcase 03:39</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="section-title white-title">
+                            <span class="display-3 text-danger">Über unsere Firma</span>
+                            <!-- <h2 class="title">More for trade-in could increase car here<span>.</span></h2> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container">
           <div class="progress-wrap" data-background="img/bg/progress_bg.jpg">
               <div class="row">
                   <div class="col-lg-6">
@@ -226,20 +231,21 @@
               </div>
           </div>
       </div> -->
-  </section>
-  <!-- video-area-end -->
+    </section>
+    <!-- video-area-end -->
 
 
 </main>
 <!-- main-area-end -->
 
- <!-- footer-brand-area -->
- <div class="footer-brand-area mt-50">
+<!-- footer-brand-area -->
+<div class="footer-brand-area mt-50">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-4 col-md-6 order-2 order-md-0">
                 <div class="footer-logo">
-                    <a href="#"><img src="{% static 'img/logo/tj_logo33.png' %}" style="border-radius: 5px 5px;width: 100%;"alt=""></a>
+                    <a href="#"><img src="{% static 'img/logo/tj_logo36.png' %}"
+                            style="border-radius: 5px 5px;width: 80%;" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-8 col-md-6">
