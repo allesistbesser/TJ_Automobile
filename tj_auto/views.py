@@ -35,6 +35,7 @@ def about(request):
   context = {
        'firmaInfo': firmaInfo,
        'openHours': openHours,
+       'ipInfo':request.META['REMOTE_ADDR'],
    }
   return render(request, 'about_us.html',context)
 
