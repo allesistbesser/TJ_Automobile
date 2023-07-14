@@ -54,12 +54,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // logo_imgage change with click
 let index = 0
-let liste1 = ["tj_logo32.png", "tj_logo34.png", "tj_logo37.png", "tj_logo39.png","tj_logo40.png","base_logo3.png","base_logo1.png"]
+let liste1 = ["tj_logo32.png", "tj_logo34.png", "tj_logo37.png", "tj_logo39.png", "tj_logo40.png", "base_logo3.png", "base_logo1.png"]
 let logoImg = document.querySelector('#logo_img')
 logoImg.innerHTML = `<img src="../static/img/logo/${liste1[index]}" style="height: 55px; border-radius: 5px;" alt="Logo"> <p>logo: ${index}</p>`
 
 logoImg.addEventListener('click', function () {
-   if (index >= liste1.length - 1) {
+  if (index >= liste1.length - 1) {
     index = 0
   } else {
     index += 1
@@ -68,10 +68,55 @@ logoImg.addEventListener('click', function () {
   logoImg.innerHTML = `<img src="../static/img/logo/${liste1[index]}" style="height: 55px; border-radius: 5px;" alt="Logo"> <p>logo: ${index}</p>`
 })
 
+
+
+// openingTime control - öffnungs Zeit kontrol
+// document.addEventListener("DOMContentLoaded", function () {
+  var today = new Date();
+  var dayNumber = today.getDay();
+  var days = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+  var day = days[dayNumber];
+  console.log("opening time arasi");
+  document.getElementById(day).style.backgroundColor = "gray"
+
+  var currentHour = new Date().getHours();
+  var currentMinute = new Date().getMinutes();
+
+  var saatElementi = document.getElementById(day);
+  var saatler = saatElementi.nextElementSibling.textContent;
+try {
+    if (saatler.includes("geschlossen")) {
+    document.getElementById("openingHours").innerText = "Jetz geschlossen"
+    document.getElementById("openingHours").style.color = "red"
+  } else {
+    var saatAraligi = saatler.split("–");
+    var startHour = parseInt(saatAraligi[0].split(":")[0]);
+    var endHour = parseInt(saatAraligi[1].split(":")[0]);
+    var startMinute = parseInt(saatAraligi[0].split(":")[1]);
+    var endMinute = parseInt(saatAraligi[1].split(":")[1]);
+
+    if ((currentHour > startHour || (currentHour === startHour && currentMinute >= startMinute)) &&
+      (currentHour < endHour || (currentHour === endHour && currentMinute < endMinute))) {
+  
+      document.getElementById("openingHours").innerText = "Jetz geöffnet"
+      document.getElementById("openingHours").style.color = "green"
+    } else {
+     
+      document.getElementById("openingHours").innerText = "Jetz geschlossen"
+      document.getElementById("openingHours").style.color = "red"
+    }
+  }
+} catch (error) {
+  console.log(error);
+}
+
+// });
+
 // banner image change with click and with every time the page is refreshed
 let liste2 = ["2023-bmw-3.png", "mer_sl500.png", "mercedes_eq.png", "mercedes_eq1.png", "mercedes3.png", "mercedes5.png"]
 let i = Math.floor(Math.random() * liste2.length - 1) + 1
-let logoBanner = document.querySelector('.banner-img')
+try {
+  let logoBanner = document.querySelector('.banner-img')
 logoBanner.innerHTML = `<img src="../static/img/slider/${liste2[i]}" style="width: 700px;" alt="">`
 
 logoBanner.addEventListener('click', function () {
@@ -80,7 +125,9 @@ logoBanner.addEventListener('click', function () {
   } else {
     i += 1
   }
-  console.log(liste2[i]);
   logoBanner.innerHTML = `<img src="../static/img/slider/${liste2[i]}" style="width: 700px;" alt="">
   <h5>auto: ${i}</h5>`
 })
+} catch (error) {
+  console.log(error);
+}

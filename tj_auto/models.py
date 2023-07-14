@@ -37,12 +37,38 @@ class FirmenInfos(models.Model):
   facebookLink = models.CharField(max_length=1000, blank=True)
   twitterLink = models.CharField(max_length=1000, blank=True)
   
+  def save(self, *args, **kwargs):
+        # İlk kayıt eklendiğinde
+        if not self.pk and FirmenInfos.objects.exists():
+            # İkinci bir obje eklenmesini engellemek için
+            return
+        return super().save(*args, **kwargs)
+      
   def __str__(self):
         return f'wichtige info von {self.email}'
        
 class OpeningHours(models.Model):
+    day_number = models.IntegerField()
     day = models.CharField(max_length=20)
     hours = models.CharField(max_length=50, blank=True)
+    
+    class Meta:
+        ordering = ['day_number']
+    
+    def save(self, *args, **kwargs):
+       
+        if self.pk:
+            # İlk 7 objenin güncellenmesine izin ver
+            if OpeningHours.objects.all().count() <= 7:
+                return super().save(*args, **kwargs)
+            else:
+                return
+        else:
+            # İlk 7 objenin kaydedilmesine izin ver
+            if OpeningHours.objects.count() < 7:
+                return super().save(*args, **kwargs)
+            else:
+                return
 
     def __str__(self):
-        return self.day
+        return f'{self.day_number}-{self.day} '

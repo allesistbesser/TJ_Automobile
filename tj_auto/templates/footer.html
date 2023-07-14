@@ -96,6 +96,9 @@
                             </div>
                             <!-- öffnungszeiten -->
                             <div>
+                                <div id="openingHours"
+                                    style="background-color: white; text-align: center;font-weight: 900;"></div>
+
                                 <table>
                                     <tr>
                                         <th>Tag</th>
@@ -103,10 +106,11 @@
                                     </tr>
                                     {% for item in openHours %}
                                     <tr>
-                                        <td>{{item.day}}</td>
+                                        <td id="{{item.day}}">{{item.day}}</td>
                                         <td>{{item.hours}}</td>
                                     </tr>
                                     {% endfor %}
+
                                 </table>
                             </div>
                             <div class="col-xl-5 col-lg-6 col-md-6">
@@ -124,7 +128,8 @@
                                         <ul>
                                             <li><a href="{{firmaInfo.facebookLink}}" target="_blank"><i
                                                         class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="{{firmaInfo.twitterLink}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                            <li><a href="{{firmaInfo.twitterLink}}" target="_blank"><i
+                                                        class="fab fa-twitter"></i></a>
                                             </li>
                                             <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
                                             <!-- <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li> -->
@@ -153,7 +158,7 @@
                     <div class="copyright-text">
                         <p>Copyright © 2023. All rights reserved</p>
                         <a href="https://www.linkedin.com/in/mesuttepebas/" target="_blank"> WebMaster & Mesut</a>
-                        <li style="color: rgb(64, 63, 63);">{{ipInfo}}</li>
+
                     </div>
                 </div>
                 <div class="col-md-4">
