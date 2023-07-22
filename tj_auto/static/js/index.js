@@ -54,9 +54,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // logo_imgage change with click
 let index = 0
-let liste1 = ["tj_logo32.png", "tj_logo34.png", "tj_logo37.png", "tj_logo39.png", "tj_logo40.png", "base_logo3.png", "base_logo1.png"]
+let liste1 = ["tj_logo32.png", "tj_logo34.png", "tj_logo37.png", "tj_logo39.png", "tj_logo40.png","base_logo5.png","base_logo6.png"]
 let logoImg = document.querySelector('#logo_img')
-logoImg.innerHTML = `<img src="../static/img/logo/${liste1[index]}" style="height: 55px; border-radius: 5px;" alt="Logo"> <p>logo: ${index}</p>`
+logoImg.innerHTML = `<img src="../static/img/logo/${liste1[index]}" style="height: 55px; border-radius: 5px;" alt="Logo"> <i>${index}</i>`
 
 logoImg.addEventListener('click', function () {
   if (index >= liste1.length - 1) {
@@ -65,7 +65,7 @@ logoImg.addEventListener('click', function () {
     index += 1
   }
   console.log(liste1[index]);
-  logoImg.innerHTML = `<img src="../static/img/logo/${liste1[index]}" style="height: 55px; border-radius: 5px;" alt="Logo"> <p>logo: ${index}</p>`
+  logoImg.innerHTML = `<img src="../static/img/logo/${liste1[index]}" style="height: 55px; border-radius: 5px;" alt="Logo"> <i>${index}</i>`
 })
 
 
@@ -126,7 +126,7 @@ logoBanner.addEventListener('click', function () {
     i += 1
   }
   logoBanner.innerHTML = `<img src="../static/img/slider/${liste2[i]}" style="width: 700px;" alt="">
-  <h5>auto: ${i}</h5>`
+  <h5> ${i}</h5>`
 })
 } catch (error) {
   console.log(error);
