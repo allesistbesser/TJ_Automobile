@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // logo_imgage change with click
 let index = 0
-let liste1 = ["tj_logo32.png", "tj_logo34.png", "tj_logo37.png", "tj_logo39.png", "tj_logo40.png","base_logo5.png","base_logo6.png"]
+let liste1 = ["base_logo6.png", "base_logo5.png", "tj_logo32.png", "tj_logo34.png", "tj_logo37.png", "tj_logo39.png", "tj_logo40.png"]
 let logoImg = document.querySelector('#logo_img')
 logoImg.innerHTML = `<img src="../static/img/logo/${liste1[index]}" style="height: 55px; border-radius: 5px;" alt="Logo"> <i>${index}</i>`
 
