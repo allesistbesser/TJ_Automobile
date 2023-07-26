@@ -25,34 +25,7 @@ console.log("visit calisti");
 // Her dakikada bir ziyaret süresini güncelle
 setInterval(updateVisitDuration, 10000);
 
-
-// window.addEventListener('DOMContentLoaded', () => {
-//   var welcomeMessage;
-//   if (!sessionStorage.getItem('visited')) {
-//     welcomeMessage = document.getElementById('welcome-message');
-
-//     // İlk 10 saniye boyunca hoş geldiniz mesajını görünür kıl
-//     var messageTimeOut = setTimeout(() => {
-//       welcomeMessage.style.opacity = '0';
-//       window.removeEventListener("mousemove", handleMouseDown);
-//       console.log("settimeout calisti");
-//     }, 10000);
-
-//     // Fare hareketine bağlı olarak hoş geldiniz mesajını takip et
-//     window.addEventListener('mousemove', handleMouseDown);
-//     console.log("welcome calisti");
-//     sessionStorage.setItem('visited', true);
-//   } else {
-//     document.getElementById('welcome-message').style.fontSize = "0"
-//   }
-
-
-//   function handleMouseDown(e) {
-//     welcomeMessage.style.top = `${e.clientY + 50}px`;
-//     welcomeMessage.style.right = `${window.innerWidth - e.clientX - 250}px`;
-//   }
-// });
-
+// Welcome Text ----------------------------------------------------------
 window.addEventListener('DOMContentLoaded', () => {
   var welcomeMessage;
   if (!sessionStorage.getItem('visited')) {
@@ -71,7 +44,6 @@ window.addEventListener('DOMContentLoaded', () => {
   } else {
     document.getElementById('welcome-message').style.fontSize = "0"
   }
-
 
   function handleMouseDown(e) {
     targetX = e.clientX;
