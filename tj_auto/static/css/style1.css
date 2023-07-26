@@ -42,7 +42,7 @@
   color: rgb(228, 122, 15);
   text-shadow: 2px 2px 2px rgb(217, 223, 208);
   font-weight: 1000;
-  animation: welcome 10s linear infinite;
+  animation: welcome 11s linear infinite;
   animation-iteration-count: 1;
 }
 
@@ -52,13 +52,13 @@
   }
 
   25% {
-    opacity: 0.75;
+    opacity: 0.9;
   }
   50% {
-    opacity: 0.50;
+    opacity: 0.7;
   }
   75% {
-    opacity: 0.25;
+    opacity: 0.4;
   }
 
   100% {
