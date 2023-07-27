@@ -21,7 +21,7 @@ function updateVisitDuration() {
 
   // İstenilen işlemler buraya eklenebilir, örneğin, ziyaret süresini sayfada göstermek için bir HTML elementini güncelleyebilirsiniz
 }
-console.log("visit calisti");
+
 // Her dakikada bir ziyaret süresini güncelle
 setInterval(updateVisitDuration, 10000);
 
